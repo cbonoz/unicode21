@@ -8,6 +8,8 @@ const { Panel } = Collapse;
 function Learn(props) {
   return (
     <div>
+      <h3>A primer to core Uniswap concepts</h3>
+      <br />
       <Collapse accordion>
         {ACCORDIONS.map(({ term, content, url }, i) => {
           return (

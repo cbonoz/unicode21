@@ -3,11 +3,18 @@ import TokenSelect from "./TokenSelect";
 
 function Trade(props) {
   const [token, setToken] = useState();
+  const [destToken, setDestToken] = useState();
 
   return (
     <div>
+      <span className="trade-heading">I have:</span>
       <TokenSelect onChange={setToken} />
-      {JSON.stringify(token)}
+      {token && (
+        <div>
+          <span className="trade-heading">I want:</span>
+          <TokenSelect onChange={setDestToken} />
+        </div>
+      )}
     </div>
   );
 }

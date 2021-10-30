@@ -18,8 +18,6 @@ import {
   useUserProviderAndSigner,
 } from "eth-hooks";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
-// import Hints from "./Hints";
-import { ExampleUI, Hints, Subgraph } from "./views";
 
 // contracts
 import deployedContracts from "./contracts/hardhat_contracts.json";
@@ -31,6 +29,7 @@ import Authereum from "authereum";
 import { capitalize } from "./util";
 import Trade from "./components/Trade";
 import Pools from "./components/Pools";
+import Learn from "./components/Learn";
 
 const { ethers } = require("ethers");
 /*
@@ -465,16 +464,16 @@ function App(props) {
             );
           })}
         </Menu>
-          <div className='container'>
-        <Switch>
-          <Route exact path="/">
-            {/*
+        <div className="container">
+          <Switch>
+            <Route exact path="/">
+              {/*
                 🎛 this scaffolding is full of commonly used components
                 this <Contract/> component will automatically parse your ABI
                 and give you a form to interact with it locally
             */}
 
-            {/* <Contract
+              {/* <Contract
               name="YourContract"
               price={price}
               signer={userSigner}
@@ -483,20 +482,21 @@ function App(props) {
               blockExplorer={blockExplorer}
               contractConfig={contractConfig}
             /> */}
-          </Route>
+            </Route>
 
-          <Route path="/trade">
-            <Trade />
-          </Route>
-          <Route path="/earn">
-            <Pools />
-          </Route>
-          <Route path="/visualize">
-            <p>TODO</p>
-          </Route>
-          <Route path="/learn">
-          </Route>
-        </Switch>
+            <Route path="/trade">
+              <Trade />
+            </Route>
+            <Route path="/earn">
+              <Pools />
+            </Route>
+            <Route path="/visualize">
+              <p>TODO</p>
+            </Route>
+            <Route path="/learn">
+              <Learn />
+            </Route>
+          </Switch>
         </div>
       </BrowserRouter>
 
