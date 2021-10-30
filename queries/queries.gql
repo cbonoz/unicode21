@@ -1,0 +1,33 @@
+{
+  pools(first: 1000, skip: 1000) {
+    id
+    token0 {
+      id
+      name
+    }
+    token1 {
+      id
+      name
+    }
+  }
+}
+
+{
+  tokens(
+    where: { symbol: "WETH" }
+    first: 100
+    orderBy: txCount
+    orderDirection: desc
+  ) {
+    id
+    symbol
+    txCount
+    poolCount
+    whitelistPools {
+      id
+    }
+    tokenDayData(first: 100) {
+      id
+    }
+  }
+}
