@@ -490,9 +490,9 @@ function App(props) {
             <Route path="/earn">
               <Pools />
             </Route>
-            <Route path="/visualize">
+            {/* <Route path="/visualize">
               <p>TODO</p>
-            </Route>
+            </Route> */}
             <Route path="/learn">
               <Learn />
             </Route>
