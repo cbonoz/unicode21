@@ -30,6 +30,7 @@ import { capitalize } from "./util";
 import Trade from "./components/Trade";
 import Pools from "./components/Pools";
 import Learn from "./components/Learn";
+import Earn from "./components/Earn";
 
 const { ethers } = require("ethers");
 /*
@@ -488,7 +489,7 @@ function App(props) {
               <Trade />
             </Route>
             <Route path="/earn">
-              <Pools />
+              <Earn />
             </Route>
             {/* <Route path="/visualize">
               <p>TODO</p>

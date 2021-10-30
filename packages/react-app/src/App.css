@@ -8,6 +8,16 @@
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.header-text {
+  font-weight: bold;
+}
+
+.trade-heading {
+  font-size: 16px;
+  font-weight: 500;
+  clear: both;
+}
 .header-image {
   height: 30px;
 }
