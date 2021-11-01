@@ -35,7 +35,12 @@ Polywrap
 
 - https://unigrants.notion.site/unigrants/UNICODE-Getting-Started-Guide-5f6cdf907a834f73aa28d2fde329d9c7
 - https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
+- https://docs.polywrap.io/guides/create-js-dapp/react-integration
+
+
+### Running the project
   In the project directory, you can run:
+
 
 ### `yarn start`
 

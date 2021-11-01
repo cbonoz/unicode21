@@ -13,6 +13,32 @@
 }
 
 {
+    pools(where: { id_in:["0x04916039b1f59d9745bf6e0a21f191d1e0a84287","0x11b815efb8f581194ae79006d24e0d814b7697f6"]}) {
+        id, token0{name}, token1 {name}, txCount, feesUSD, tick, volumeUSD
+    }
+}
+
+
+
+{
+  tokens(
+    where: { symbol: "WETH" }
+    first: 10
+    orderBy: txCount
+    orderDirection: desc
+  ) {
+    id
+    symbol
+    txCount
+    poolCount
+    whitelistPools {
+      id
+    }
+  }
+}
+
+
+{
   tokens(
     where: { symbol: "WETH" }
     first: 100
