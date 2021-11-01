@@ -8,7 +8,7 @@ function TokenSelect({ onChange }) {
   return (
     <Select
       showSearch
-      style={{ width: 200 }}
+      style={{ width: 400 }}
       placeholder="Select token"
       optionFilterProp="children"
       onChange={v => onChange(TOKENS.find(x => x.symbol === v))}
@@ -17,7 +17,7 @@ function TokenSelect({ onChange }) {
       {TOKENS.map((t, i) => {
         return (
           <Option key={i} value={t.symbol}>
-            {t.name}
+            {`${t.name} (${t.symbol})`}
           </Option>
         );
       })}

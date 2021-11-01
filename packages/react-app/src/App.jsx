@@ -440,7 +440,7 @@ function App(props) {
     );
   }
 
-  const ROUTES = ["home", "trade", "earn", "learn"];
+  const ROUTES = ["home", "trade", "discover pools", "learn"];
 
   return (
     <div className="App">
@@ -450,7 +450,7 @@ function App(props) {
       <BrowserRouter>
         <Menu style={{ textAlign: "center" }} selectedKeys={[route]} mode="horizontal">
           {ROUTES.map(r => {
-            const link = `/${r}`;
+            const link = `/${r.replace(" ", "-")}`;
             return (
               <Menu.Item key={link}>
                 <Link
@@ -488,7 +488,7 @@ function App(props) {
             <Route path="/trade">
               <Trade />
             </Route>
-            <Route path="/earn">
+            <Route path="/discover-pools">
               <Earn />
             </Route>
             {/* <Route path="/visualize">

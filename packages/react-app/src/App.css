@@ -13,6 +13,10 @@
   font-weight: bold;
 }
 
+.first-token {
+  margin-bottom: 20px;
+}
+
 .trade-heading {
   font-size: 16px;
   font-weight: 500;

@@ -10,8 +10,10 @@ function Trade({}) {
 
   return (
     <div>
-      <span className="trade-heading">I have: </span>
-      <TokenSelect onChange={setToken} />
+      <div className="first-token">
+        <span className="trade-heading">I have: </span>
+        <TokenSelect onChange={setToken} />
+      </div>
       {token && (
         <div>
           <span className="trade-heading">I want: </span>
@@ -21,8 +23,9 @@ function Trade({}) {
 
       {tradeUrl && (
         <p>
+          <br />
           <a href={tradeUrl} target="_blank">
-            Trade
+            Trade {token?.symbol} for {destToken?.symbol}
           </a>
         </p>
       )}
