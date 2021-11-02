@@ -1,4 +1,6 @@
-## UniExplorer
+## Uniramp
+
+Uniramp is an onboarding and education platform for new uniswap users designed to get them interacting and creating their own liquidity pools with minimal friction.
 
 A liquity pool explorer/education platform.
 
@@ -6,11 +8,10 @@ https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 
 Going after the UNI Documentation and Onboarding + Inclusion and access categories.
 
-
 <!--
 
 Demo flow:
-* Lquity explorers exist but are not approachable for new users (ex: https://defirating.finance/en/pools/, not sure what to do with this information)
+* Liquity explorers exist but are not approachable for new users (ex: https://defirating.finance/en/pools/, not sure what to do with this information)
 * https://info.uniswap.org/#/
 * https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 * As a new user, I'm not looking for pools or tokens right away - I'm thinking trading and earning.
