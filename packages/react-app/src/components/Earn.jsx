@@ -12,6 +12,7 @@ function Earn(props) {
   const onCompleted = res => {
     const ps = res?.tokens[0].whitelistPools || [];
     setPools(ps);
+    console.log("pools", ps);
   };
 
   const { loading, data, refetch } = useQuery(getTokenQuery(token?.symbol), { skip: !token, onCompleted });
@@ -44,7 +45,7 @@ function Earn(props) {
     return <LoadingOutlined />;
   }
 
-  console.log("d", poolIds, poolData, token, data);
+  // console.log("d", poolIds, poolData, token, data);
 
   return (
     <div>
@@ -54,10 +55,10 @@ function Earn(props) {
       {token && data && (
         <div>
           <p className="header-text">Pool Whitelist</p>
-          {pools.map((p, i) => {
+          {/* {pools.map((p, i) => {
             return <div key={i}>{JSON.stringify(p)}</div>;
           })}
-          <p>{JSON.stringify(poolData)}</p>
+          <p>{JSON.stringify(poolData)}</p> */}
           <PoolChart data={poolData} />
         </div>
       )}
