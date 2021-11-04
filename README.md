@@ -8,6 +8,8 @@ https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 
 Going after the UNI Documentation and Onboarding + Inclusion and access categories.
 
+Trade, earn, and learn.
+
 <!--
 
 Demo flow:
@@ -19,8 +21,10 @@ Demo flow:
 
 
 Sponsors:
-Omni analytics
-Polywrap
+Uniswap (get users to get comfortable with pools and swapping tokens). - mainly the graph, need to add metamask interaction.
+Visor (invest your assets for visor rewards). - purely visualization with the graph
+Polywrap (optional)
+Skynet (deployment)
 
 
 ### Screenshots
@@ -28,7 +32,6 @@ Polywrap
 
 
 * https://showcase.ethglobal.com/unicode/prizes
--->
 
 ### Useful links
 
@@ -36,6 +39,8 @@ Polywrap
 - https://unigrants.notion.site/unigrants/UNICODE-Getting-Started-Guide-5f6cdf907a834f73aa28d2fde329d9c7
 - https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
 - https://docs.polywrap.io/guides/create-js-dapp/react-integration
+
+-->
 
 ### Running the project
 
