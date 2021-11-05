@@ -17,7 +17,7 @@ Demo flow:
 * https://info.uniswap.org/#/
 * https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 * As a new user, I'm not looking for pools or tokens right away - I'm thinking trading and earning.
-* UniExplorer
+* Unirap
 
 
 Sponsors:

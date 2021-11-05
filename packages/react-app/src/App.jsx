@@ -2,7 +2,7 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import WalletLink from "walletlink";
 import { Alert, Button, Col, Menu, Row } from "antd";
 import "antd/dist/antd.css";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useMemo } from "react";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Web3Modal from "web3modal";
 import "./App.css";
@@ -444,6 +444,14 @@ function App(props) {
   const loggedIn = !!web3Modal?.cachedProvider;
 
   const ROUTES = loggedIn ? ["trade", "discover pools", "learn"] : ["setup"];
+
+  useMemo(() => {
+    const href = window.location.pathname;
+    console.log("href", href);
+    if (loggedIn && (href === "/" || href === "/setup")) {
+      window.location.href = "/trade";
+    }
+  }, [loggedIn]);
 
   return (
     <div className="App">
