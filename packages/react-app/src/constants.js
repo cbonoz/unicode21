@@ -195,5 +195,5 @@ export const NETWORK = chainId => {
 
 export const TARGET_NETWORK = NETWORKS.ropsten;
 
-export const APP_NAME = "UniExplorer";
+export const APP_NAME = "Uniramp";
 export const APP_DESCRIPTION = "Find and trade using the most popular best Uniswap pools.";

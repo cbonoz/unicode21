@@ -31,6 +31,7 @@ import Trade from "./components/Trade";
 import Pools from "./components/Pools";
 import Learn from "./components/Learn";
 import Earn from "./components/Earn";
+import Home from "./components/Home";
 
 const { ethers } = require("ethers");
 /*
@@ -440,7 +441,9 @@ function App(props) {
     );
   }
 
-  const ROUTES = ["home", "trade", "discover pools", "learn"];
+  const loggedIn = !!web3Modal?.cachedProvider;
+
+  const ROUTES = loggedIn ? ["trade", "discover pools", "learn"] : ["setup"];
 
   return (
     <div className="App">
@@ -467,7 +470,8 @@ function App(props) {
         </Menu>
         <div className="container">
           <Switch>
-            <Route exact path="/">
+            <Route exact path={["/", "/setup"]}>
+              <Home login={loadWeb3Modal} />
               {/*
                 🎛 this scaffolding is full of commonly used components
                 this <Contract/> component will automatically parse your ABI

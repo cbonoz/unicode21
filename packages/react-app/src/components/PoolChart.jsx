@@ -1,36 +1,23 @@
 import React, { useMemo } from "react";
 import { Column, Line } from "@ant-design/charts";
+import { getPoolUrl } from "../util";
 
 export default function PoolChart({ data }) {
-  const chartData = useMemo(() => {
-    const pools = data.pools.map((x, i) => {
-      return {
-        // ...x,
-        id: x.id,
-        volumeUSD: parseFloat(parseFloat(x.volumeUSD).toFixed(2)),
-        txCount: parseInt(x.txCount),
-        pair: `${x.token0.name}/${x.token1.name}`,
-      };
-    });
-    pools.sort((a, b) => (a.txCount < b.txCount ? 1 : -1));
-    console.log("data", pools);
-    return pools; // .slice(0, 10);
-  }, [data]);
-  if (!chartData) {
-    return null;
+  if (!data) {
+    return <p>No data available</p>;
   }
   const config = {
-    data: chartData,
+    data,
     xField: "pair",
     yField: "txCount",
-    maxBarWidth: 100,
+    maxBarWidth: 10,
     xAxis: {
       label: {
         autoRotate: true,
         autoHide: false,
         autoEllipsis: false,
       },
-      tickCount: chartData.length,
+      tickCount: data.length,
     },
     yAxis: {
       visible: true,
@@ -59,6 +46,11 @@ export default function PoolChart({ data }) {
     },
   };
 
+  const openPool = poolId => {
+    // Remove focus to skip auto tab to new window.
+    window.open(getPoolUrl(poolId), "_blank").focus();
+  };
+
   //   https://charts.ant.design/guide/case
   // console.log("data", chartData);
 
@@ -71,6 +63,10 @@ export default function PoolChart({ data }) {
           const { xField } = plot.options;
           const tooltipData = plot.chart.getTooltipItems({ x, y });
           console.log(tooltipData);
+          const poolId = tooltipData[0].data.id;
+          if (poolId) {
+            openPool(poolId);
+          }
         });
       }}
     />

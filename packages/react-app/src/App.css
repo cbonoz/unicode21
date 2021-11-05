@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.ant-layout,
+.ant-layout-sider,
+.ant-layout-header {
+  background: white !important;
+}
+
+.logo-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.home-logo {
+  margin: 20px;
+}
+
 .container {
   /* margin-top: 60px; */
   padding-top: 25px;
