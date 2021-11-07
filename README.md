@@ -47,25 +47,25 @@ Skynet (deployment)
 ### Screenshots
 
 <p>Home screen</p>
-<img src="./img/home.png" width=600/>
+<img src="./img/home.png" width=800/>
 <p>Find the top whitelisted pools for each uniswap-supported token</p>
-<img src="./img/earn.png" width=600/>
+<img src="./img/earn.png" width=800/>
 <p>Drill into Uniswap's existing detail view for discovered pools</p>
-<img src="./img/pool.png" width=600/>
+<img src="./img/pool.png" width=800/>
 <p>Access existing hypervisors for the given pool / trading pair</p>
-<img src="./img/visors.png" width=600/>
+<img src="./img/visors.png" width=800/>
 <p>Better understand assumed risk when providing liquidity</p>
-<img src="./img/risk.png" width=600/>
+<img src="./img/risk.png" width=800/>
 <p>Swap tokens from Uniramp with a simple interface</p>
-<img src="./img/swap.png" width=600/>
+<img src="./img/swap.png" width=800/>
 <p>Learn core Uniswap concepts directly from the app.</p>
-<img src="./img/learn.png" width=600/>
+<img src="./img/learn.png" width=800/>
 <p>Example graphql query powering recommended hypervisors for a given Uniswap pool.</p>
-<img src="./img/visor.png" width=600/>
-<p>Hosted on siasky</p>
-<img src="./img/siasky.png" width=600/>
+<img src="./img/visor.png" width=800/>
+<p>Hosted version on Siasky.</p>
+<img src="./img/siasky.png" width=800/>
 <p>Add build to homescreen</p>
-<img src="./img/build.png"/>
+<img src="./img/build.png" width=800/>
 
 ### Running the project
 
