@@ -20,6 +20,7 @@
   "description": "An easy platform for discovering and interacting with Uniswap liquidity pools",
   "iconPath": "./favicon.ico",
   "short_name": "Uniramp",
+  "homepage": ".",
   "start_url": ".",
   "theme_color": "#ff007a",
   "skylink": ""
