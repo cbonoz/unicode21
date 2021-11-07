@@ -451,6 +451,8 @@ function App(props) {
     console.log("href", href);
     if (loggedIn && (href === "/" || href === "/setup")) {
       window.location.href = "/trade";
+    } else if (!loggedIn && href !== "/setup") {
+      window.location.href = "/setup";
     }
   }, [loggedIn]);
 

@@ -16,14 +16,17 @@ function Home({ login }) {
         <p>{APP_DESCRIPTION}</p>
       </div>
       <Steps progressDot current={2}>
-        <Step title="Login with Metamask" description="Connect your Ethereum-enabled wallet to use Uniramp." />
         <Step
-          title="Find, share, and create liquidity pools"
-          description="Uniramp helps you discover the most advantageous liquidity pools."
+          title="Login with Metamask."
+          // description="Connect your Ethereum-enabled wallet to use Uniramp."
         />
         <Step
-          title="Learn and earn rewards"
-          description="Uniramp has a suite of free information to onboard you to core Uniswap concepts."
+          title="Find, share, and create liquidity pools."
+          // description="Uniramp helps you discover the most advantageous liquidity pools."
+        />
+        <Step
+          title="Learn and earn rewards."
+          // description="Uniramp has a suite of free information to onboard you to core Uniswap concepts."
         />
       </Steps>
 
