@@ -5,14 +5,19 @@ import { getPoolsQuery, getTokenQuery } from "../queries";
 import PoolChart from "./PoolChart";
 import TokenSelect from "./TokenSelect";
 import { Button, Layout } from "antd";
-import { List, Typography, Divider } from "antd";
+import { Modal, List, Typography, Divider } from "antd";
 import { getPoolUrl } from "../util";
 
 const { Header, Footer, Sider, Content } = Layout;
 
+// const visorClient = new ApolloClient({
+//   uri: "https://api.thegraph.com/subgraphs/name/visorfinance/visor",
+// });
+
 function Earn(props) {
   const [token, setToken] = useState();
   const [pools, setPools] = useState([]);
+  const [visorData, setVisorData] = useState();
 
   const onCompleted = res => {
     const ps = res?.tokens[0].whitelistPools || [];
@@ -105,8 +110,9 @@ function Earn(props) {
                         <a href="#" onClick={e => openPool(e, item.id)}>
                           {item.id} - Transactions: {item.txCount}
                         </a>
-                        ){/* <Button type="primary" onClick={() => openPool(item.id)}> */}
-                        {/* View
+                        )&nbsp;
+                        {/* <Button type="primary" onClick={() => openPool(item.id)}>
+                          Search hypervisors
                         </Button> */}
                       </span>
                     </List.Item>
@@ -115,6 +121,9 @@ function Earn(props) {
               </Content>
             </Layout>
           </Layout>
+          <Modal title="Hypervisors" visible={!!visorData} onOk={() => setVisorData(undefined)}>
+            {JSON.stringify(visorData || {})}
+          </Modal>
           {/* {pools.map((p, i) => {
             return <div key={i}>{JSON.stringify(p)}</div>;
           })}

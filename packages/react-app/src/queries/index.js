@@ -14,6 +14,21 @@ export const GET_POOLS = `{
   }
 }`;
 
+export const getHypervisors = () => {
+  return gql(`{uniswapV3Pools(first: 10){
+    id, hypervisors, fee, token0{name}, token1{name}
+  }
+  
+  }`);
+};
+
+export const getHypervisorForPool = poolId => {
+  return gql(`{uniswapV3Pools(where: {id:"${poolId}"}){
+    id, hypervisors, fee, token0{name}, token1{name}
+  }
+  }`);
+};
+
 export const getPoolsQuery = poolIds => {
   const q = `
   {
