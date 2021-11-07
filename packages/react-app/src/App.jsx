@@ -454,7 +454,8 @@ function App(props) {
     const href = window.location.pathname;
     console.log("href", href);
     if (loggedIn && (href === "/" || href === "/setup")) {
-      history.push("/trade");
+      history.push("/discover-pools");
+      window.location.reload();
     } else if (!loggedIn && href !== "/setup") {
       history.push("/setup");
     }

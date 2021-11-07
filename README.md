@@ -24,8 +24,15 @@ Demo flow:
 * Liquity explorers exist but are not approachable for new users (ex: https://defirating.finance/en/pools/, not sure what to do with this information)
 * https://info.uniswap.org/#/
 * https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
+* Just the beginnings
 * As a new user, I'm not looking for pools or tokens right away - I'm thinking trading and earning.
 * Uniramp
+* There's a lot of pools, anyone can create a pool. New users w
+* Future work:
+- Integrated app rewards and learning programs
+- Integrated pool creation
+* End with code/repo
+
 
 
 Sponsors:
