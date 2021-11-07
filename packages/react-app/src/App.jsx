@@ -9,6 +9,10 @@ import "./App.css";
 import { Account, Contract, Header, ThemeSwitch } from "./components";
 import { INFURA_ID, NETWORK, TARGET_NETWORK } from "./constants";
 import { Transactor } from "./helpers";
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
+
 import {
   useBalance,
   useContractLoader,
@@ -450,9 +454,9 @@ function App(props) {
     const href = window.location.pathname;
     console.log("href", href);
     if (loggedIn && (href === "/" || href === "/setup")) {
-      window.location.href = "/trade";
+      history.push("/trade");
     } else if (!loggedIn && href !== "/setup") {
-      window.location.href = "/setup";
+      history.push("/setup");
     }
   }, [loggedIn]);
 
