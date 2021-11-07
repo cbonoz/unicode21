@@ -29,6 +29,15 @@ export const getTradeUrl = (inputCurrencyAddress, outputCurrencyAddress) => {
   return `https://app.uniswap.org/#/swap?inputCurrency=${inputCurrencyAddress}&outputCurrency=${outputCurrencyAddress}`;
 };
 
+export function range(start, end) {
+  return Array.apply(0, Array(end - 1)).map((element, index) => index + start);
+}
+
 export const impermanentLoss = k => {
-  return (2 * Math.sqrt(k)) / (1 + k) - 1;
+  if (k == 0) {
+    return -9999;
+  } else if (!k) {
+    return undefined;
+  }
+  return ((2 * Math.sqrt(k)) / (1 + k) - 1).toFixed(2);
 };

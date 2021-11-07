@@ -103,7 +103,7 @@ function Earn(props) {
                       <span>
                         {item.pair} (
                         <a href="#" onClick={e => openPool(e, item.id)}>
-                          {item.id}
+                          {item.id} - Transactions: {item.txCount}
                         </a>
                         ){/* <Button type="primary" onClick={() => openPool(item.id)}> */}
                         {/* View

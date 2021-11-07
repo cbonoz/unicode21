@@ -12,9 +12,17 @@
   margin: 50px;
 }
 
+.ant-input,
+.ant-input-affix-wrapper {
+  max-width: 400px;
+}
+
 .ant-collapse-content-box p {
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+}
+.risk-page {
   padding: 20px;
 }
 

@@ -10,6 +10,8 @@ Going after the UNI Documentation and Onboarding + Inclusion and access categori
 
 Trade, earn, and learn.
 
+https://thegraph.com/hosted-service/subgraph/visorfinance/visor
+
 <!--
 
 Demo flow:
@@ -17,7 +19,7 @@ Demo flow:
 * https://info.uniswap.org/#/
 * https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 * As a new user, I'm not looking for pools or tokens right away - I'm thinking trading and earning.
-* Unirap
+* Uniramp
 
 
 Sponsors:
@@ -39,6 +41,7 @@ Skynet (deployment)
 - https://unigrants.notion.site/unigrants/UNICODE-Getting-Started-Guide-5f6cdf907a834f73aa28d2fde329d9c7
 - https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
 - https://docs.polywrap.io/guides/create-js-dapp/react-integration
+- https://medium.com/auditless/how-to-calculate-impermanent-loss-full-derivation-803e8b2497b7
 
 -->
 
