@@ -48,6 +48,9 @@
 .first-token {
   margin-bottom: 20px;
 }
+.float-right {
+  float: right;
+}
 
 .trade-heading {
   font-size: 16px;

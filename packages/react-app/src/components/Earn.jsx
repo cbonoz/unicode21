@@ -130,9 +130,10 @@ function Earn(props) {
                         <a href="#" onClick={e => openPool(e, item.id)}>
                           {item.id} - Transactions: {item.txCount}
                         </a>
-                        )&nbsp;
+                        )&nbsp;&nbsp;
                         <Button
-                          type="primary"
+                          className="float-right"
+                          type="secondary"
                           onClick={() => queryVisor(item.id)}
                           disabled={visorLoading}
                           loading={visorLoading}
@@ -146,13 +147,7 @@ function Earn(props) {
               </Content>
             </Layout>
           </Layout>
-          <Modal
-            width={800}
-            type="secondary"
-            title="Found Hypervisors"
-            visible={!!visorData}
-            onOk={() => setVisorData(undefined)}
-          >
+          <Modal width={800} title="Found Hypervisors" visible={!!visorData} onOk={() => setVisorData(undefined)}>
             <pre>{JSON.stringify(visorData || {}, null, "\t")}</pre>
           </Modal>
           {/* {pools.map((p, i) => {

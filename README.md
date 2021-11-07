@@ -42,15 +42,7 @@ Polywrap (optional)
 Skynet (deployment)
 
 * https://showcase.ethglobal.com/unicode/prizes
-
-
-### Useful links
-
-- https://ethglobal.notion.site/UniCode-Info-Center-0ba5eb0ebd384475850ec64a4bc5d257
-- https://unigrants.notion.site/unigrants/UNICODE-Getting-Started-Guide-5f6cdf907a834f73aa28d2fde329d9c7
-- https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
-- https://docs.polywrap.io/guides/create-js-dapp/react-integration
-- https://medium.com/auditless/how-to-calculate-impermanent-loss-full-derivation-803e8b2497b7
+-->
 
 ### Screenshots
 
@@ -60,6 +52,8 @@ Skynet (deployment)
 <img src="./img/earn.png" width=600/>
 <p>Drill into Uniswap's existing detail view for discovered pools</p>
 <img src="./img/pool.png" width=600/>
+<p>Access existing hypervisors for the given pool / trading pair</p>
+<img src="./img/visors.png" width=600/>
 <p>Better understand assumed risk when providing liquidity</p>
 <img src="./img/risk.png" width=600/>
 <p>Swap tokens from Uniramp with a simple interface</p>
@@ -72,8 +66,6 @@ Skynet (deployment)
 <img src="./img/siasky.png" width=600/>
 <p>Add build to homescreen</p>
 <img src="./img/build.png"/>
-
--->
 
 ### Running the project
 
@@ -101,3 +93,11 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Useful links
+
+- https://ethglobal.notion.site/UniCode-Info-Center-0ba5eb0ebd384475850ec64a4bc5d257
+- https://unigrants.notion.site/unigrants/UNICODE-Getting-Started-Guide-5f6cdf907a834f73aa28d2fde329d9c7
+- https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
+- https://docs.polywrap.io/guides/create-js-dapp/react-integration
+- https://medium.com/auditless/how-to-calculate-impermanent-loss-full-derivation-803e8b2497b7
