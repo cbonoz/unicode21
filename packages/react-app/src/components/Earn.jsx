@@ -1,28 +1,48 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { useQuery, useLazyQuery } from "@apollo/client";
 import React, { useState, useEffect, useMemo } from "react";
-import { getPoolsQuery, getTokenQuery } from "../queries";
+import { getHypervisorForPool, getPoolsQuery, getTokenQuery } from "../queries";
 import PoolChart from "./PoolChart";
 import TokenSelect from "./TokenSelect";
 import { Button, Layout } from "antd";
 import { Modal, List, Typography, Divider } from "antd";
 import { getPoolUrl } from "../util";
+import { ApolloClient } from "@apollo/client";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
 const { Header, Footer, Sider, Content } = Layout;
 
-// const visorClient = new ApolloClient({
-//   uri: "https://api.thegraph.com/subgraphs/name/visorfinance/visor",
-// });
+const visorClient = new ApolloClient({
+  uri: "https://api.thegraph.com/subgraphs/name/visorfinance/visor",
+  cache: new InMemoryCache(),
+});
+
+const EX_HYPER_POOL = "0x06b1655b9d560de112759b4f0bf57d6f005e72fe";
 
 function Earn(props) {
   const [token, setToken] = useState();
   const [pools, setPools] = useState([]);
   const [visorData, setVisorData] = useState();
+  const [visorLoading, setVisorLoading] = useState(false);
 
   const onCompleted = res => {
     const ps = res?.tokens[0].whitelistPools || [];
     setPools(ps);
     console.log("pools", ps);
+  };
+
+  const queryVisor = async poolId => {
+    setVisorLoading(true);
+    const query = getHypervisorForPool(poolId);
+    try {
+      const res = await visorClient.query({ query });
+      setVisorData({ poolId, ...res.data });
+    } catch (e) {
+      console.error(e);
+      alert(e);
+    } finally {
+      setVisorLoading(false);
+    }
   };
 
   const { loading, data, refetch } = useQuery(getTokenQuery(token?.symbol), { skip: !token, onCompleted });
@@ -111,9 +131,14 @@ function Earn(props) {
                           {item.id} - Transactions: {item.txCount}
                         </a>
                         )&nbsp;
-                        {/* <Button type="primary" onClick={() => openPool(item.id)}>
+                        <Button
+                          type="primary"
+                          onClick={() => queryVisor(item.id)}
+                          disabled={visorLoading}
+                          loading={visorLoading}
+                        >
                           Search hypervisors
-                        </Button> */}
+                        </Button>
                       </span>
                     </List.Item>
                   )}
@@ -121,8 +146,14 @@ function Earn(props) {
               </Content>
             </Layout>
           </Layout>
-          <Modal title="Hypervisors" visible={!!visorData} onOk={() => setVisorData(undefined)}>
-            {JSON.stringify(visorData || {})}
+          <Modal
+            width={800}
+            type="secondary"
+            title="Found Hypervisors"
+            visible={!!visorData}
+            onOk={() => setVisorData(undefined)}
+          >
+            <pre>{JSON.stringify(visorData || {}, null, "\t")}</pre>
           </Modal>
           {/* {pools.map((p, i) => {
             return <div key={i}>{JSON.stringify(p)}</div>;

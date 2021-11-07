@@ -37,6 +37,12 @@ export const ACCORDIONS = [
     content: "Smart contract on Ethereum that maintains token reserves automatically.",
   },
   {
+    term: "Hypervisor",
+    content:
+      "A hypervisor is a Visor contract that helps you manage or implement strategies against DeFi protocols such as Uniswap.",
+    url: "https://medium.com/visorfinance/the-uniswap-v3-supervisor-visor-vault-upgrade-and-introduction-of-protocol-revenue-to-visr-stakers-fb6c4b11eda4",
+  },
+  {
     term: "Impermanent Loss",
     content:
       "As a liquidity provider, your position may fall in value with respect to either asset (before fees) and it's useful to find the percentage loss a liquidity provider would experience for a given price movement. This difference between holding two assets and staking them in a pool is called impermanent loss.",
