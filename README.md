@@ -16,7 +16,7 @@ Going after the UNI Documentation and Onboarding + Inclusion and access categori
 
 Trade, earn, and learn.
 
-https://thegraph.com/hosted-service/subgraph/visorfinance/visor
+<a href="https://0003rg0rq551tpuq34hl6cc5glvpjnmqcjosnh68k10qboftvkbb3to.siasky.net" target="_blank">Deployed on Siasky</a>
 
 <!--
 
