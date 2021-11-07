@@ -28,12 +28,8 @@ Visor (invest your assets for visor rewards). - purely visualization with the gr
 Polywrap (optional)
 Skynet (deployment)
 
-
-### Screenshots
-
-
-
 * https://showcase.ethglobal.com/unicode/prizes
+
 
 ### Useful links
 
@@ -42,6 +38,23 @@ Skynet (deployment)
 - https://thegraph.com/hosted-service/subgraph/ianlapham/uniswap-v3-testing?query=Pools
 - https://docs.polywrap.io/guides/create-js-dapp/react-integration
 - https://medium.com/auditless/how-to-calculate-impermanent-loss-full-derivation-803e8b2497b7
+
+### Screenshots
+
+<p>Home screen</p>
+<img src="./img/home.png" width=600/>
+<p>Find the top whitelisted pools for each uniswap-supported token</p>
+<img src="./img/earn.png" width=600/>
+<p>Drill into Uniswap's existing detail view for discovered pools</p>
+<img src="./img/pool.png" width=600/>
+<p>Better understand assumed risk when providing liquidity</p>
+<img src="./img/risk.png" width=600/>
+<p>Swap tokens from Uniramp with a simple interface</p>
+<img src="./img/swap.png" width=600/>
+<p>Learn core Uniswap concepts directly from the app.</p>
+<img src="./img/learn.png" width=600/>
+<p>Example graphql query powering recommended hypervisors for a given Uniswap pool.</p>
+<img src="./img/visor.png" width=600/>
 
 -->
 
