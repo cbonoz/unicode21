@@ -36,4 +36,9 @@ export const ACCORDIONS = [
     term: "Automated Market Maker (AMM)",
     content: "Smart contract on Ethereum that maintains token reserves automatically.",
   },
+  {
+    term: "Impermanent Loss",
+    content: "As a liquidity provider, your position may fall in value with respect to either asset (before fees) and impermanent loss is often defined as the percentage loss an LP would experience for a given price movement.",
+    url: "https://medium.com/auditless/how-to-calculate-impermanent-loss-full-derivation-803e8b2497b7"
+  }
 ];

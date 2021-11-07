@@ -8,6 +8,16 @@
   background: white !important;
 }
 
+.home-button-section {
+  margin: 50px;
+}
+
+.ant-collapse-content-box p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .logo-section {
   margin-top: 100px;
   margin-bottom: 100px;

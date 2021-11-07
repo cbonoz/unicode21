@@ -32,6 +32,7 @@ import Pools from "./components/Pools";
 import Learn from "./components/Learn";
 import Earn from "./components/Earn";
 import Home from "./components/Home";
+import VisorFinance from "./components/VisorFinance";
 
 const { ethers } = require("ethers");
 /*
@@ -443,7 +444,7 @@ function App(props) {
 
   const loggedIn = !!web3Modal?.cachedProvider;
 
-  const ROUTES = loggedIn ? ["trade", "discover pools", "learn"] : ["setup"];
+  const ROUTES = loggedIn ? ["discover pools", "swap", "learn", "understanding risk"] : ["setup"];
 
   useMemo(() => {
     const href = window.location.pathname;
@@ -497,7 +498,7 @@ function App(props) {
             /> */}
             </Route>
 
-            <Route path="/trade">
+            <Route path={["/trade", "/swap"]}>
               <Trade />
             </Route>
             <Route path="/discover-pools">
@@ -508,6 +509,9 @@ function App(props) {
             </Route> */}
             <Route path="/learn">
               <Learn />
+            </Route>
+            <Route path="/understanding-risk">
+              <VisorFinance />
             </Route>
           </Switch>
         </div>

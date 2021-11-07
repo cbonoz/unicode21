@@ -10,6 +10,7 @@ function Trade({}) {
 
   return (
     <div>
+      <h1>Swap</h1>
       <div className="first-token">
         <span className="trade-heading">I have: </span>
         <TokenSelect onChange={setToken} />

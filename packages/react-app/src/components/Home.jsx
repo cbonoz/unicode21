@@ -16,14 +16,22 @@ function Home({ login }) {
         <p>{APP_DESCRIPTION}</p>
       </div>
       <Steps progressDot current={2}>
-        {/* <Step title="Waiting" description="This is a description." />
-        <Step title="In Progress" description="This is a description." />
-        <Step title="Finished" description="This is a description." /> */}
+        <Step title="Login with Metamask" description="Connect your Ethereum-enabled wallet to use Uniramp." />
+        <Step
+          title="Find, share, and create liquidity pools"
+          description="Uniramp helps you discover the most advantageous liquidity pools."
+        />
+        <Step
+          title="Learn and earn rewards"
+          description="Uniramp has a suite of free information to onboard you to core Uniswap concepts."
+        />
       </Steps>
 
-      <Button type="primary" onClick={login}>
-        Get started
-      </Button>
+      <div className="home-button-section">
+        <Button type="primary" size="large" onClick={login}>
+          Get started
+        </Button>
+      </div>
     </div>
   );
 }

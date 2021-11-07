@@ -4,8 +4,9 @@ import React, { useState, useEffect, useMemo } from "react";
 import { getPoolsQuery, getTokenQuery } from "../queries";
 import PoolChart from "./PoolChart";
 import TokenSelect from "./TokenSelect";
-import { Layout } from "antd";
+import { Button, Layout } from "antd";
 import { List, Typography, Divider } from "antd";
+import { getPoolUrl } from "../util";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -67,8 +68,15 @@ function Earn(props) {
 
   // console.log("d", poolIds, poolData, token, data);
 
+  const openPool = (e, poolId) => {
+    e.preventDefault();
+    // Remove focus to skip auto tab to new window.
+    window.open(getPoolUrl(poolId), "_blank"); //.focus();
+  };
+
   return (
     <div>
+      <h1>Discover Pools</h1>
       <h3>Provide liquidity for tokens, earn fees when anyone uses a pool related to your contribution!</h3>
       <span className="trade-heading">I have: </span>
       <TokenSelect onChange={setToken} />
@@ -83,17 +91,27 @@ function Earn(props) {
               <br />
             </Header>
             <Layout>
-              {/* <Sider> */}
-              {/* {poolData.length} pools found. */}
-              {/* <List
-                  size="small"
-                  bordered
-                  dataSource={poolData.map(x => x.id)}
-                  renderItem={item => <List.Item>{item}</List.Item>}
-                /> */}
-              {/* </Sider> */}
               <Content>
                 <PoolChart data={poolData} />
+                <h3>Full list</h3>
+                <List
+                  size="small"
+                  bordered
+                  dataSource={poolData}
+                  renderItem={item => (
+                    <List.Item>
+                      <span>
+                        {item.pair} (
+                        <a href="#" onClick={e => openPool(e, item.id)}>
+                          {item.id}
+                        </a>
+                        ){/* <Button type="primary" onClick={() => openPool(item.id)}> */}
+                        {/* View
+                        </Button> */}
+                      </span>
+                    </List.Item>
+                  )}
+                />
               </Content>
             </Layout>
           </Layout>

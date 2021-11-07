@@ -8,6 +8,7 @@ const { Panel } = Collapse;
 function Learn(props) {
   return (
     <div>
+            <h1>Learn</h1>
       <h3>A primer to core Uniswap concepts</h3>
       <br />
       <Collapse accordion>

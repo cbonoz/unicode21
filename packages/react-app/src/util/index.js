@@ -28,3 +28,7 @@ export const getTradeUrl = (inputCurrencyAddress, outputCurrencyAddress) => {
   }
   return `https://app.uniswap.org/#/swap?inputCurrency=${inputCurrencyAddress}&outputCurrency=${outputCurrencyAddress}`;
 };
+
+export const impermanentLoss = k => {
+  return (2 * Math.sqrt(k)) / (1 + k) - 1;
+};
