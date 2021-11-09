@@ -14,13 +14,16 @@ https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
 
 Going after the UNI Documentation and Onboarding + Inclusion and access categories.
 
-Trade, earn, and learn.
+You can try the first version yourself here:
 
 <a href="https://0003rg0rq551tpuq34hl6cc5glvpjnmqcjosnh68k10qboftvkbb3to.siasky.net" target="_blank">Deployed on Siasky</a>
+
+Trade, earn, and learn.
 
 <!--
 
 Demo flow:
+* Chris, Boston, Uniramp
 * Liquity explorers exist but are not approachable for new users (ex: https://defirating.finance/en/pools/, not sure what to do with this information)
 * https://info.uniswap.org/#/
 * https://unigrants.notion.site/RFPs-Challenges-3be614ba4e504b5caeee7b0159e64a42
@@ -31,6 +34,8 @@ Demo flow:
 * Future work:
 - Integrated app rewards and learning programs
 - Integrated pool creation
+- Rather than recreating some of the uniswap concepts. Onboard and tie into that existing functionality.
+- Suite of visualization tools possible
 * End with code/repo
 
 
